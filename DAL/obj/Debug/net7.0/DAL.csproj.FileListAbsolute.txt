@@ -1,0 +1,17 @@
+F:\TAIIB\LAB2\DAL\bin\Debug\net7.0\DAL.deps.json
+F:\TAIIB\LAB2\DAL\bin\Debug\net7.0\DAL.runtimeconfig.json
+F:\TAIIB\LAB2\DAL\bin\Debug\net7.0\DAL.dll
+F:\TAIIB\LAB2\DAL\bin\Debug\net7.0\DAL.pdb
+F:\TAIIB\LAB2\DAL\bin\Debug\net7.0\Model.dll
+F:\TAIIB\LAB2\DAL\bin\Debug\net7.0\Model.pdb
+F:\TAIIB\LAB2\DAL\obj\Debug\net7.0\DAL.csproj.AssemblyReference.cache
+F:\TAIIB\LAB2\DAL\obj\Debug\net7.0\DAL.GeneratedMSBuildEditorConfig.editorconfig
+F:\TAIIB\LAB2\DAL\obj\Debug\net7.0\DAL.AssemblyInfoInputs.cache
+F:\TAIIB\LAB2\DAL\obj\Debug\net7.0\DAL.AssemblyInfo.cs
+F:\TAIIB\LAB2\DAL\obj\Debug\net7.0\DAL.csproj.CoreCompileInputs.cache
+F:\TAIIB\LAB2\DAL\obj\Debug\net7.0\DAL.csproj.CopyComplete
+F:\TAIIB\LAB2\DAL\obj\Debug\net7.0\DAL.dll
+F:\TAIIB\LAB2\DAL\obj\Debug\net7.0\refint\DAL.dll
+F:\TAIIB\LAB2\DAL\obj\Debug\net7.0\DAL.pdb
+F:\TAIIB\LAB2\DAL\obj\Debug\net7.0\DAL.genruntimeconfig.cache
+F:\TAIIB\LAB2\DAL\obj\Debug\net7.0\ref\DAL.dll
