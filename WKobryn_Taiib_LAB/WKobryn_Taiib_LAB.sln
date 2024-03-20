@@ -3,11 +3,13 @@ Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio Version 17
 VisualStudioVersion = 17.4.33110.190
 MinimumVisualStudioVersion = 10.0.40219.1
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "WebApi", "WebApi.csproj", "{C64B4434-83CD-4678-AB1D-9BD427BA472A}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "WebApi", "WebApi.csproj", "{C64B4434-83CD-4678-AB1D-9BD427BA472A}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Model", "..\Model\Model.csproj", "{87B708E6-C62E-4ECF-B972-36874AE078BB}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Model", "..\Model\Model.csproj", "{87B708E6-C62E-4ECF-B972-36874AE078BB}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "DAL", "..\DAL\DAL.csproj", "{F34ACC70-CFA6-45CF-87B2-F684B00A0D64}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "DAL", "..\DAL\DAL.csproj", "{F34ACC70-CFA6-45CF-87B2-F684B00A0D64}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "BLL", "..\BLL\BLL.csproj", "{97814157-7844-4585-BABF-900387744E7D}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -27,6 +29,10 @@ Global
 		{F34ACC70-CFA6-45CF-87B2-F684B00A0D64}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{F34ACC70-CFA6-45CF-87B2-F684B00A0D64}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{F34ACC70-CFA6-45CF-87B2-F684B00A0D64}.Release|Any CPU.Build.0 = Release|Any CPU
+		{97814157-7844-4585-BABF-900387744E7D}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{97814157-7844-4585-BABF-900387744E7D}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{97814157-7844-4585-BABF-900387744E7D}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{97814157-7844-4585-BABF-900387744E7D}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

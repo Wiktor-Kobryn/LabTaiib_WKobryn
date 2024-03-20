@@ -21,10 +21,15 @@ namespace Model
         public Order Order { get; set; }
         public int Amount { get; set; }
         public double Price { get; set; }
+        [Column("ProductID"), Required]
+        public int ProductId { get; set; }
+        [ForeignKey(nameof(ProductId)), Required]
+        public Product Product { get; set; }
 
         public void Configure(EntityTypeBuilder<OrderPosition> builder)
         {
-            builder.HasOne(p => p.Order).WithMany(p => p.OrderPositions).OnDelete(DeleteBehavior.Restrict);
+            builder.HasOne(p => p.Order).WithMany(p => p.OrderPositions).OnDelete(DeleteBehavior.Cascade);
+            builder.HasOne(p => p.Product).WithMany(p => p.OrderPositions).OnDelete(DeleteBehavior.Cascade);
         }
     }
 }

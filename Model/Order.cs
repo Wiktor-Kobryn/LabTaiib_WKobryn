@@ -25,7 +25,6 @@ namespace Model
         public void Configure(EntityTypeBuilder<Order> builder)
         {
             builder.HasOne(p => p.User).WithMany(p => p.Orders).OnDelete(DeleteBehavior.Restrict);
-            builder.HasMany(p=>p.OrderPositions).WithOne(p=>p.Order).OnDelete(DeleteBehavior.Cascade);
         }
     }
 }

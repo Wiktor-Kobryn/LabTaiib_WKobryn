@@ -11,7 +11,7 @@ using System.Threading.Tasks;
 namespace Model
 {
     [Table("PRODUCTS")]
-    public class Product : IEntityTypeConfiguration<Product>
+    public class Product
     {
         [Key, Column("ID")]
         public int Id { get; set; }
@@ -22,10 +22,6 @@ namespace Model
         public string Image { get; set; }
         public bool IsActive { get; set; }
         public IEnumerable<BasketPosition> BasketPositions { get; set; }
-
-        public void Configure(EntityTypeBuilder<Product> builder)
-        {
-            builder.HasMany(p => p.BasketPositions).WithOne(p => p.Product).OnDelete(DeleteBehavior.Cascade);
-        }
+        public IEnumerable<OrderPosition> OrderPositions { get; set; }
     }
 }

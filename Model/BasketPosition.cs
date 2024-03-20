@@ -27,8 +27,8 @@ namespace Model
 
         public void Configure(EntityTypeBuilder<BasketPosition> builder)
         {
-            builder.HasOne(p => p.Product).WithMany(p => p.BasketPositions).OnDelete(DeleteBehavior.Restrict);
-            builder.HasOne(p => p.User).WithMany(p => p.BasketPositions).OnDelete(DeleteBehavior.Restrict);
+            builder.HasOne(p => p.Product).WithMany(p => p.BasketPositions).OnDelete(DeleteBehavior.Cascade);
+            builder.HasOne(p => p.User).WithMany(p => p.BasketPositions).OnDelete(DeleteBehavior.Cascade);
         }
     }
 }

@@ -16,7 +16,7 @@ namespace Model
     }
 
     [Table("USERS")]
-    public class User : IEntityTypeConfiguration<User>
+    public class User
     {
         [Key, Column("ID")]
         public int Id { get; set; }
@@ -28,11 +28,5 @@ namespace Model
         public bool IsActive { get; set; }
         public IEnumerable<BasketPosition> BasketPositions { get; set; }
         public IEnumerable<Order> Orders { get; set; }
-
-        public void Configure(EntityTypeBuilder<User> builder)
-        {
-            builder.HasMany(p=>p.BasketPositions).WithOne(p=>p.User).OnDelete(DeleteBehavior.Cascade);
-            builder.HasMany(p => p.Orders).WithOne(p => p.User).OnDelete(DeleteBehavior.SetNull);
-        }
     }
 }
