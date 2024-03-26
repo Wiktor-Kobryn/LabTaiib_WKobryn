@@ -8,9 +8,9 @@ namespace BLL
 {
     public interface IBasketPositionBLL
     {
-        void AddProductToBasket(ProductDTO product);
-        void DeleteProductFromBasket(int id);
-        void ChangeAmountOfProduct(int id, int amount);
-
+        void AddBasketPosition(int userId, int productId);
+        bool DeleteBasketPosition(int basketPositionId);
+        bool ChangeBasketPositionAmount(int basketPositionId, int amount);
+        List<BasketPositionDTO> GetUserBasketPositions(int userId);
     }
 }

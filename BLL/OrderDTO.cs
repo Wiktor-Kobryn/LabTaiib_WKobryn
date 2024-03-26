@@ -11,7 +11,6 @@ namespace BLL
 {
     public class OrderDTO
     {
-        public int Id { get; set; }
         public UserDTO User { get; set; }
         public DateTime Date { get; set; }
         public IEnumerable<OrderPositionDTO> OrderPositions { get; set; }
