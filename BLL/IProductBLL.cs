@@ -15,8 +15,8 @@ namespace BLL
         List<ProductDTO> GetProductsSortedAsc();
         List<ProductDTO> GetProductsSortedDesc();
         void AddProduct(ProductDTO product);
-        void EditProduct(int productId, ProductDTO product);
+        bool EditProduct(int productId, ProductDTO product);
         bool DeleteProduct(int productId);
-        void ActivateProduct(int productId);
+        bool ActivateProduct(int productId);
     }
 }

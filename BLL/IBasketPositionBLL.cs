@@ -8,7 +8,7 @@ namespace BLL
 {
     public interface IBasketPositionBLL
     {
-        void AddBasketPosition(int userId, int productId);
+        bool AddBasketPosition(int userId, int productId, int amount = 0);
         bool DeleteBasketPosition(int basketPositionId);
         bool ChangeBasketPositionAmount(int basketPositionId, int amount);
         List<BasketPositionDTO> GetUserBasketPositions(int userId);
