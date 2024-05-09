@@ -1,4 +1,6 @@
 
+using BLL;
+using BLL_EF;
 using DAL;
 
 namespace WKobryn_Taiib_LAB
@@ -12,6 +14,10 @@ namespace WKobryn_Taiib_LAB
             // Add services to the container.
 
             builder.Services.AddControllers();
+            builder.Services.AddScoped<IProductService, ProductService>();
+            builder.Services.AddScoped<IOrderService, OrderService>();
+            builder.Services.AddScoped<IBasketPositionService, BasketPositionService>();
+
             // Learn more about configuring Swagger/OpenAPI at https://aka.ms/aspnetcore/swashbuckle
             builder.Services.AddEndpointsApiExplorer();
             builder.Services.AddSwaggerGen();

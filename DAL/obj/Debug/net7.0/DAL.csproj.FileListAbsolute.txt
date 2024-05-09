@@ -9,9 +9,9 @@ F:\TAIIB\LAB2\DAL\obj\Debug\net7.0\DAL.GeneratedMSBuildEditorConfig.editorconfig
 F:\TAIIB\LAB2\DAL\obj\Debug\net7.0\DAL.AssemblyInfoInputs.cache
 F:\TAIIB\LAB2\DAL\obj\Debug\net7.0\DAL.AssemblyInfo.cs
 F:\TAIIB\LAB2\DAL\obj\Debug\net7.0\DAL.csproj.CoreCompileInputs.cache
-F:\TAIIB\LAB2\DAL\obj\Debug\net7.0\DAL.csproj.CopyComplete
 F:\TAIIB\LAB2\DAL\obj\Debug\net7.0\DAL.dll
 F:\TAIIB\LAB2\DAL\obj\Debug\net7.0\refint\DAL.dll
 F:\TAIIB\LAB2\DAL\obj\Debug\net7.0\DAL.pdb
 F:\TAIIB\LAB2\DAL\obj\Debug\net7.0\DAL.genruntimeconfig.cache
 F:\TAIIB\LAB2\DAL\obj\Debug\net7.0\ref\DAL.dll
+F:\TAIIB\LAB2\DAL\obj\Debug\net7.0\DAL.csproj.Up2Date

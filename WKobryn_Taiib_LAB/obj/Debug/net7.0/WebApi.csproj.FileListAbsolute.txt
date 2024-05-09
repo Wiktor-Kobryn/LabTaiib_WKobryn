@@ -72,9 +72,13 @@ F:\TAIIB\LAB2\WKobryn_Taiib_LAB\obj\Debug\net7.0\staticwebassets.pack.json
 F:\TAIIB\LAB2\WKobryn_Taiib_LAB\obj\Debug\net7.0\staticwebassets.build.json
 F:\TAIIB\LAB2\WKobryn_Taiib_LAB\obj\Debug\net7.0\staticwebassets.development.json
 F:\TAIIB\LAB2\WKobryn_Taiib_LAB\obj\Debug\net7.0\scopedcss\bundle\WebApi.styles.css
-F:\TAIIB\LAB2\WKobryn_Taiib_LAB\obj\Debug\net7.0\WebApi.csproj.CopyComplete
 F:\TAIIB\LAB2\WKobryn_Taiib_LAB\obj\Debug\net7.0\WebApi.dll
 F:\TAIIB\LAB2\WKobryn_Taiib_LAB\obj\Debug\net7.0\refint\WebApi.dll
 F:\TAIIB\LAB2\WKobryn_Taiib_LAB\obj\Debug\net7.0\WebApi.pdb
 F:\TAIIB\LAB2\WKobryn_Taiib_LAB\obj\Debug\net7.0\WebApi.genruntimeconfig.cache
 F:\TAIIB\LAB2\WKobryn_Taiib_LAB\obj\Debug\net7.0\ref\WebApi.dll
+F:\TAIIB\LAB2\WKobryn_Taiib_LAB\bin\Debug\net7.0\BLL.dll
+F:\TAIIB\LAB2\WKobryn_Taiib_LAB\bin\Debug\net7.0\BLL_EF.dll
+F:\TAIIB\LAB2\WKobryn_Taiib_LAB\bin\Debug\net7.0\BLL_EF.pdb
+F:\TAIIB\LAB2\WKobryn_Taiib_LAB\bin\Debug\net7.0\BLL.pdb
+F:\TAIIB\LAB2\WKobryn_Taiib_LAB\obj\Debug\net7.0\WebApi.csproj.Up2Date
