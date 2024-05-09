@@ -1,0 +1,24 @@
+<p>PRODUCTS</p>
+
+<form #paginationForm="ngForm" (ngSubmit)="onPaginationSubmit()">
+    <label for="page">Nr strony: </label>
+    <input id="page" name="page" type="number" min="0" [(ngModel)]="page" />
+    <label for="count">Liczba elemntów na stronie: </label>
+    <input id="count" name="count" type="number" min="0" [(ngModel)]="count" />
+    <input id="submit" name="submit" type="submit" value="Pobierz"/>
+</form>
+<br />
+
+<table border="1" style="border-collapse: collapse">
+    <thead>
+        <th>Image</th>
+        <th>Name</th>
+        <th>Price</th>
+        <th>IsActive</th>
+    </thead>
+    <tbody>
+        <tr>
+            <!--wyswietlanie produktow-->
+        </tr>
+    </tbody>
+</table>
