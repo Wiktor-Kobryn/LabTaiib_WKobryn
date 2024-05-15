@@ -9,12 +9,10 @@ namespace WebApi.Controllers
     [Route("api/[controller]")]
     public class BasketPositionsController : ControllerBase
     {
-        private WebshopContext context;
-        private BasketPositionService service;
+        readonly IBasketPositionService service;
 
-        public BasketPositionsController(WebshopContext context, BasketPositionService service)
+        public BasketPositionsController(BasketPositionService service)
         {
-            this.context = context;
             this.service = service;
         }
 
@@ -36,7 +34,7 @@ namespace WebApi.Controllers
             return service.ChangeBasketPositionAmount(basketPositionId, amount);
         }
 
-        [HttpGet("{userId}")]
+        [HttpGet("User/{userId}")]
         public IEnumerable<BasketPositionResponseDTO> GetUserBasketPositions(int userId)
         {
             return service.GetUserBasketPositions(userId);

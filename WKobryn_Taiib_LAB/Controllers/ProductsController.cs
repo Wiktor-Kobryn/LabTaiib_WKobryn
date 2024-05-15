@@ -9,12 +9,10 @@ namespace WebApi.Controllers
     [Route("api/[controller]")]
     public class ProductsController : ControllerBase
     {
-        private WebshopContext context;
-        private ProductService service;
+        readonly IProductService service;
 
-        public ProductsController(WebshopContext context, ProductService service)
+        public ProductsController(IProductService service)
         {
-            this.context = context;
             this.service = service;
         }
 
@@ -24,31 +22,31 @@ namespace WebApi.Controllers
             return service.GetProducts();
         }
 
-        [HttpGet]
+        [HttpGet("Paged")]
         public IEnumerable<ProductResponseDTO> GetProducts([FromQuery] int page, [FromQuery] int pageSize)
         {
             return service.GetProducts(page, pageSize);
         }
 
-        [HttpGet]
+        [HttpGet("Name")]
         public IEnumerable<ProductResponseDTO> GetProducts([FromQuery] string name)
         {
             return service.GetProducts(name);
         }
 
-        [HttpGet]
+        [HttpGet("Active")]
         public IEnumerable<ProductResponseDTO> GetActiveProducts()
         {
             return service.GetActiveProducts();
         }
 
-        [HttpGet]
+        [HttpGet("Asc")]
         public IEnumerable<ProductResponseDTO> GetProductsSortedAsc()
         {
             return service.GetProductsSortedAsc();
         }
 
-        [HttpGet]
+        [HttpGet("Desc")]
         public IEnumerable<ProductResponseDTO> GetProductsSortedDesc()
         {
             return service.GetProductsSortedDesc();
@@ -72,7 +70,7 @@ namespace WebApi.Controllers
             return service.DeleteProduct(productId);
         }
 
-        [HttpPut("{productId}")]
+        [HttpPut("Activate/{productId}")]
         public bool ActivateProduct(int productId)
         {
             return service.ActivateProduct(productId);

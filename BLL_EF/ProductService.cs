@@ -12,7 +12,7 @@ namespace BLL_EF
 {
     public class ProductService : IProductService
     {
-        private WebshopContext webshop;
+        private readonly WebshopContext webshop;
 
         public ProductService(WebshopContext webshop)
         {

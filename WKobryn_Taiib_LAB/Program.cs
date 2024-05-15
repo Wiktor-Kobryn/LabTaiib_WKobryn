@@ -32,9 +32,15 @@ namespace WKobryn_Taiib_LAB
                 app.UseSwagger();
                 app.UseSwaggerUI();
             }
+            app.UseHttpsRedirection();
+
+            app.UseCors(optBuilder => optBuilder
+                                            .AllowAnyHeader()
+                                            .AllowAnyMethod()
+                                            .AllowAnyOrigin()
+                                            .Build());
 
             app.UseAuthorization();
-
 
             app.MapControllers();
 

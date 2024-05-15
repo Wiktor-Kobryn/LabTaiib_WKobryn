@@ -11,7 +11,7 @@ namespace BLL_EF
 {
     public class BasketPositionService : IBasketPositionService
     {
-        private WebshopContext webshop;
+        private readonly WebshopContext webshop;
 
         public BasketPositionService(WebshopContext webshop)
         {

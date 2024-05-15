@@ -11,7 +11,7 @@ namespace BLL_EF
 {
     public class OrderService : IOrderService
     {
-        private WebshopContext webshop;
+        private readonly WebshopContext webshop;
 
         public OrderService(WebshopContext webshop)
         {

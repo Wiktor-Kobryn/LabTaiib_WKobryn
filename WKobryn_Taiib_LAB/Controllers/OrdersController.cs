@@ -9,16 +9,14 @@ namespace WebApi.Controllers
     [Route("api/[controller]")]
     public class OrdersController : ControllerBase
     {
-        private WebshopContext context;
-        private OrderService service;
+        readonly IOrderService service;
 
-        public OrdersController(WebshopContext context, OrderService service)
+        public OrdersController(IOrderService service)
         {
-            this.context = context;
             this.service = service;
         }
 
-        [HttpPost("{id}")]
+        [HttpPost("User/{id}")]
         public bool PostOrderFromBasket(int userId)
         {
             return service.CreateOrderFromBasket(userId);
@@ -30,14 +28,14 @@ namespace WebApi.Controllers
             return service.GetAllOrders();
         }
 
-        [HttpGet]
-        public IEnumerable<OrderResponseDTO> GetUserOrders([FromQuery] int userId)
+        [HttpGet("User/{id}")]
+        public IEnumerable<OrderResponseDTO> GetUserOrders(int userId)
         {
             return service.GetUserOrders(userId);
         }
 
-        [HttpGet]
-        public IEnumerable<OrderPositionResponseDTO> GetOrderPositions([FromQuery] int orderId)
+        [HttpGet("{id}/OrderPositions")]
+        public IEnumerable<OrderPositionResponseDTO> GetOrderPositions(int orderId)
         {
             return service.GetOrderPositions(orderId);
         }
