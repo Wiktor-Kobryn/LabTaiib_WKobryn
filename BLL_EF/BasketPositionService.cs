@@ -78,7 +78,7 @@ namespace BLL_EF
             return webshop.BasketPositions.Where(x => x.UserId == userId).Select(x => ToBasketPositionResponseDTO(x));
         }
 
-        private BasketPositionResponseDTO ToBasketPositionResponseDTO(BasketPosition basketPosition)
+        private static BasketPositionResponseDTO ToBasketPositionResponseDTO(BasketPosition basketPosition)
         {
             return new BasketPositionResponseDTO
             {

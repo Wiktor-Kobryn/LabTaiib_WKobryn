@@ -11,7 +11,7 @@ namespace WebApi.Controllers
     {
         readonly IBasketPositionService service;
 
-        public BasketPositionsController(BasketPositionService service)
+        public BasketPositionsController(IBasketPositionService service)
         {
             this.service = service;
         }

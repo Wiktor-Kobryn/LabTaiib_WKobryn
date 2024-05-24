@@ -20,8 +20,12 @@ namespace BLL_EF
 
         public bool CreateOrderFromBasket(int userId)
         {
-            var user = webshop.Users.Where(x => x.Id == userId).FirstOrDefault();
-            if (user == null || user.BasketPositions.Count() <= 0)
+            var user = webshop.Users.FirstOrDefault(x => x.Id == userId);
+            if (user == null)
+                return false;
+
+            var basketPositions = webshop.BasketPositions.Where(x => x.UserId == userId).ToList();
+            if (basketPositions == null || basketPositions.Count() <= 0)
                 return false;
 
             Order order = new()
@@ -32,20 +36,21 @@ namespace BLL_EF
             webshop.Orders.Add(order);
             webshop.SaveChanges();
 
-            var basketPositions = user.BasketPositions;
             foreach(BasketPosition bp in basketPositions)
             {
+                Product p = webshop.Products.FirstOrDefault(x => x.Id == bp.ProductId);
+
                 OrderPosition op = new()
                 {
                     OrderId = order.Id,
                     Amount = bp.Amount,
-                    Price = bp.Product.Price,
+                    Price = p.Price,
                     ProductId = bp.ProductId
                 };
                 webshop.OrderPositions.Add(op);
             }
 
-            webshop.Remove(basketPositions);
+            webshop.BasketPositions.RemoveRange(basketPositions);
             webshop.SaveChanges();
             return true;
         }
@@ -65,7 +70,7 @@ namespace BLL_EF
             return webshop.OrderPositions.Where(x => x.OrderId == orderId).Select(x=>ToOrderPositionResponseDTO(x));
         }
 
-        private OrderResponseDTO ToOrderResponseDTO(Order order)
+        private static OrderResponseDTO ToOrderResponseDTO(Order order)
         {
             return new OrderResponseDTO
             {
@@ -75,7 +80,7 @@ namespace BLL_EF
             };
         }
 
-        private OrderPositionResponseDTO ToOrderPositionResponseDTO(OrderPosition orderPosition)
+        private static OrderPositionResponseDTO ToOrderPositionResponseDTO(OrderPosition orderPosition)
         {
             return new OrderPositionResponseDTO
             {

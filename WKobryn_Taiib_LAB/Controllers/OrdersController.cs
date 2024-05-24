@@ -16,7 +16,7 @@ namespace WebApi.Controllers
             this.service = service;
         }
 
-        [HttpPost("User/{id}")]
+        [HttpPost("User/{userId}")]
         public bool PostOrderFromBasket(int userId)
         {
             return service.CreateOrderFromBasket(userId);
@@ -28,13 +28,13 @@ namespace WebApi.Controllers
             return service.GetAllOrders();
         }
 
-        [HttpGet("User/{id}")]
+        [HttpGet("User/{userId}")]
         public IEnumerable<OrderResponseDTO> GetUserOrders(int userId)
         {
             return service.GetUserOrders(userId);
         }
 
-        [HttpGet("{id}/OrderPositions")]
+        [HttpGet("{orderId}/OrderPositions")]
         public IEnumerable<OrderPositionResponseDTO> GetOrderPositions(int orderId)
         {
             return service.GetOrderPositions(orderId);

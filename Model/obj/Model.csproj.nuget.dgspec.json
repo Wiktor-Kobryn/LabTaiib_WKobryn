@@ -1,23 +1,24 @@
 {
   "format": 1,
   "restore": {
-    "F:\\TAIIB\\LAB2\\Model\\Model.csproj": {}
+    "E:\\TAIIB\\LAB2\\Model\\Model.csproj": {}
   },
   "projects": {
-    "F:\\TAIIB\\LAB2\\Model\\Model.csproj": {
+    "E:\\TAIIB\\LAB2\\Model\\Model.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "F:\\TAIIB\\LAB2\\Model\\Model.csproj",
+        "projectUniqueName": "E:\\TAIIB\\LAB2\\Model\\Model.csproj",
         "projectName": "Model",
-        "projectPath": "F:\\TAIIB\\LAB2\\Model\\Model.csproj",
-        "packagesPath": "C:\\Users\\Student\\.nuget\\packages\\",
-        "outputPath": "F:\\TAIIB\\LAB2\\Model\\obj\\",
+        "projectPath": "E:\\TAIIB\\LAB2\\Model\\Model.csproj",
+        "packagesPath": "C:\\Users\\wikto\\.nuget\\packages\\",
+        "outputPath": "E:\\TAIIB\\LAB2\\Model\\obj\\",
         "projectStyle": "PackageReference",
         "fallbackFolders": [
-          "C:\\Program Files\\dotnet\\sdk\\NuGetFallbackFolder"
+          "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
         ],
         "configFilePaths": [
-          "C:\\Users\\Student\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Users\\wikto\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.FallbackLocation.config",
           "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
         ],
         "originalTargetFrameworks": [
@@ -81,7 +82,7 @@
               "privateAssets": "all"
             }
           },
-          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\8.0.204\\RuntimeIdentifierGraph.json"
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\8.0.202\\RuntimeIdentifierGraph.json"
         }
       }
     }

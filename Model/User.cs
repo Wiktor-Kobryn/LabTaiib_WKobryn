@@ -12,7 +12,7 @@ namespace Model
 {
     public enum UserType
     {
-        Admin, Casual
+        Admin = 0, Casual = 1
     }
 
     [Table("USERS")]

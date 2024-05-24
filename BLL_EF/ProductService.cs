@@ -97,14 +97,14 @@ namespace BLL_EF
 
         public bool DeleteProduct(int productId)
         {
-            var product = webshop.Products.Where(x => x.Id == productId).FirstOrDefault();
+            var product = webshop.Products.FirstOrDefault((x => x.Id == productId));
             if (product == null)
                 return false;
 
-            if (product.BasketPositions.Count() > 0)
+            if (product.BasketPositions?.Count() > 0) //dodatkowe sprawdzenie null
                 return false;
 
-            if (product.OrderPositions.Count() > 0)
+            if (product.OrderPositions?.Count() > 0)
                 product.IsActive = false;
             else
                 webshop.Products.Remove(product);
@@ -124,7 +124,7 @@ namespace BLL_EF
             return true;
         }
 
-        private ProductResponseDTO ToProductResponseDTO(Product product)
+        private static ProductResponseDTO ToProductResponseDTO(Product product)
         {
             return new ProductResponseDTO
             {

@@ -2984,23 +2984,24 @@
     ]
   },
   "packageFolders": {
-    "C:\\Users\\Student\\.nuget\\packages\\": {},
-    "C:\\Program Files\\dotnet\\sdk\\NuGetFallbackFolder": {}
+    "C:\\Users\\wikto\\.nuget\\packages\\": {},
+    "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages": {}
   },
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "F:\\TAIIB\\LAB2\\DAL\\DAL.csproj",
+      "projectUniqueName": "E:\\TAIIB\\LAB2\\DAL\\DAL.csproj",
       "projectName": "DAL",
-      "projectPath": "F:\\TAIIB\\LAB2\\DAL\\DAL.csproj",
-      "packagesPath": "C:\\Users\\Student\\.nuget\\packages\\",
-      "outputPath": "F:\\TAIIB\\LAB2\\DAL\\obj\\",
+      "projectPath": "E:\\TAIIB\\LAB2\\DAL\\DAL.csproj",
+      "packagesPath": "C:\\Users\\wikto\\.nuget\\packages\\",
+      "outputPath": "E:\\TAIIB\\LAB2\\DAL\\obj\\",
       "projectStyle": "PackageReference",
       "fallbackFolders": [
-        "C:\\Program Files\\dotnet\\sdk\\NuGetFallbackFolder"
+        "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
       ],
       "configFilePaths": [
-        "C:\\Users\\Student\\AppData\\Roaming\\NuGet\\NuGet.Config",
+        "C:\\Users\\wikto\\AppData\\Roaming\\NuGet\\NuGet.Config",
+        "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.FallbackLocation.config",
         "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
       ],
       "originalTargetFrameworks": [
@@ -3014,8 +3015,8 @@
         "net7.0": {
           "targetAlias": "net7.0",
           "projectReferences": {
-            "F:\\TAIIB\\LAB2\\Model\\Model.csproj": {
-              "projectPath": "F:\\TAIIB\\LAB2\\Model\\Model.csproj"
+            "E:\\TAIIB\\LAB2\\Model\\Model.csproj": {
+              "projectPath": "E:\\TAIIB\\LAB2\\Model\\Model.csproj"
             }
           }
         }
@@ -3068,7 +3069,7 @@
             "privateAssets": "all"
           }
         },
-        "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\8.0.204\\RuntimeIdentifierGraph.json"
+        "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\8.0.202\\RuntimeIdentifierGraph.json"
       }
     }
   }
