@@ -1,24 +1,43 @@
-<p>PRODUCTS</p>
+<h1>PRODUCTS</h1>
 
-<form #paginationForm="ngForm" (ngSubmit)="onPaginationSubmit()">
-    <label for="page">Nr strony: </label>
-    <input id="page" name="page" type="number" min="0" [(ngModel)]="page" />
-    <label for="count">Liczba elemntów na stronie: </label>
-    <input id="count" name="count" type="number" min="0" [(ngModel)]="count" />
-    <input id="submit" name="submit" type="submit" value="Pobierz"/>
-</form>
 <br />
 
-<table border="1" style="border-collapse: collapse">
+<form #orderForm="ngForm" (ngSubmit)="loadProducts()">
+    <input type="radio" name="asc" [(ngModel)]="order" value="asc"> ascending <br />
+    <input type="radio" name="desc" [(ngModel)]="order" value="desc"> descending <br />
+    <input type="radio" name="paged" [(ngModel)]="order" value="paged"> paged <br />
+    <input type="radio" name="search" [(ngModel)]="order" value="search"> search name <br />
+
+    <div *ngIf="order == 'paged'">
+        <label for="page">Page number: </label>
+        <input id="page" name="page" type="number" min="0" [(ngModel)]="page" />
+        <label for="count">Page element count: </label>
+        <input id="count" name="count" type="number" min="0" [(ngModel)]="count" />
+    </div>
+    <div *ngIf="order == 'search'">
+        <label for="searchText">Search: </label>
+        <input id="searchText" name="searchText" type="text" minlength="1" [(ngModel)]="searchText" />
+    </div>
+    <br />
+    
+    <button type="submit">Show ></button>
+</form>
+
+<br />
+
+
+<table border="2" style="border-collapse: collapse;">
     <thead>
-        <th>Image</th>
-        <th>Name</th>
-        <th>Price</th>
-        <th>IsActive</th>
+        <tr>
+            <th>ID</th>
+            <th>Name</th>
+            <th>Price</th>
+        </tr>
     </thead>
     <tbody>
-        <tr>
-            <!--wyswietlanie produktow-->
+        <tr *ngFor="let p of products"
+            [app-product-row]="p"
+            (chosen)="onChosenRow($event)">
         </tr>
     </tbody>
 </table>

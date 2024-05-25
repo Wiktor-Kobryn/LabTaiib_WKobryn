@@ -1,0 +1,16 @@
+<h1>PRODUCT DETAILS</h1>
+
+<div>
+    <p>{{product.name | uppercase}}</p>
+    <img src={{product.image}} style="width: 200px; height: auto;"/>
+    <br />
+    <label>Price: {{product.price | currency:"$"}}</label>
+    <br />
+    <label>{{product.isActive ? '((ACTIVE))' : '((DISABLED))'}}</label>
+</div>
+
+<div>
+    <p>settings:</p>
+    <button (click)="onDeleteClick()">delete</button>
+    <button (click)="onActivateClick()">{{product.isActive ? 'deactivate' : 'activate'}}</button>
+</div>

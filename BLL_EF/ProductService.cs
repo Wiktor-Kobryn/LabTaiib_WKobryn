@@ -59,6 +59,11 @@ namespace BLL_EF
             return webshop.Products.OrderByDescending(x=>x.Price).Select(x => ToProductResponseDTO(x));
         }
 
+        public ProductResponseDTO GetSingleProduct(int productId)
+        {
+            return webshop.Products.Where(x => x.Id == productId).Select(x => ToProductResponseDTO(x)).FirstOrDefault();
+        }
+
         public bool AddProduct(ProductRequestDTO productRequest)
         {
             if (productRequest == null || productRequest.Price <= 0)
@@ -119,7 +124,7 @@ namespace BLL_EF
             if (product == null)
                 return false;
 
-            product.IsActive = true;
+            product.IsActive = !product.IsActive;
             webshop.SaveChanges();
             return true;
         }

@@ -52,6 +52,12 @@ namespace WebApi.Controllers
             return service.GetProductsSortedDesc();
         }
 
+        [HttpGet("{productId}")]
+        public ProductResponseDTO GetSingleProduct(int productId)
+        {
+            return service.GetSingleProduct(productId);
+        }
+
         [HttpPost]
         public bool PostProduct([FromBody] ProductRequestDTO productRequest)
         {

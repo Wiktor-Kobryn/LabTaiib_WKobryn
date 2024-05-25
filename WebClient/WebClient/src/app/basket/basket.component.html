@@ -1,1 +1,21 @@
-<p>basket works!</p>
+<h1>BASKET - USER {{userId}}</h1>
+
+<br />
+
+<table border="2" style="border-collapse: collapse;">
+    <thead>
+        <tr>
+            <th>ID</th>
+            <th>Product</th>
+            <th>Amount</th>
+        </tr>
+    </thead>
+    <tbody>
+        <tr *ngFor="let bp of basketPositions">
+            <th>{{bp.id}}</th>
+            <th>{{bp.productId}}</th>
+            <th>{{bp.amount}}</th>
+        </tr>
+    </tbody>
+</table>
+

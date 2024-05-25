@@ -18,5 +18,6 @@ namespace BLL
         bool EditProduct(int productId, ProductRequestDTO productRequest);
         bool DeleteProduct(int productId);
         bool ActivateProduct(int productId);
+        ProductResponseDTO GetSingleProduct(int productId);
     }
 }

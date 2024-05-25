@@ -1,0 +1,22 @@
+<h1>ALL ORDERS - ORDER {{orderId}}</h1>
+
+<br />
+
+<table border="2" style="border-collapse: collapse;">
+    <thead>
+        <tr>
+            <th>ID</th>
+            <th>Amount</th>
+            <th>Price</th>
+            <th>ProductID</th>
+        </tr>
+    </thead>
+    <tbody>
+        <tr *ngFor="let op of orderPositions">
+            <th>{{op.id}}</th>
+            <th>{{op.amount}}</th>
+            <th>{{op.price | currency:'$'}}</th>
+            <th>{{op.productId}}</th>
+        </tr>
+    </tbody>
+</table>
