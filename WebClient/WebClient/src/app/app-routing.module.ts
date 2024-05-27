@@ -7,6 +7,7 @@ import { BasketComponent } from './basket/basket.component';
 import { ProductDetailsComponent } from './product-details/product-details.component';
 import { OrderDetailsComponent } from './order-details/order-details.component';
 import { OrderAllDetailsComponent } from './order-all-details/order-all-details.component';
+import { LoginComponent } from './login/login.component';
 
 const routes: Routes = [
   {path: 'products', component: ProductsComponent},
@@ -16,7 +17,8 @@ const routes: Routes = [
   {path: 'orders/:order_id', component: OrderDetailsComponent},
   {path: 'orders/all/:order_id', component: OrderAllDetailsComponent},
   {path: 'basket', component: BasketComponent},
-  {path: '', redirectTo: 'products', pathMatch: 'full'}
+  {path: 'login', component: LoginComponent},
+  {path: '', redirectTo: 'login', pathMatch: 'full'}
 ];
 
 @NgModule({
